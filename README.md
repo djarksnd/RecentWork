@@ -1,17 +1,16 @@
 # README
-DirectX11의 [DeferredContext](https://docs.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-render-multi-thread-render)를 이용한 MultiThreadedTiledLighting 구현입니다.  
-다수의 조명과 그림자를 표현합니다.
 
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=800 height=450> 
+최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 문서 입니다.
 
-## Important Implementations
--   [MultiThreadedRendering](https://docs.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-render-multi-thread-intro) with [DeferredContext](https://docs.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-render-multi-thread-render)
--   [TiledSorted Deferred Rendering](https://github.com/GPUOpen-LibrariesAndSDKs/TiledLighting11/blob/master/tiledlighting11/doc/TiledLighting11.pdf)
--   One-pass PointLight Shadow Depth drawing with [GeometryShader and RenderTargetArray](https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-10-parallel-split-shadow-maps-programmable-gpus)
+## Raytracing
+-   `Raytracing`
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=800 height=450>
+-   `Raytracing-ParticleSystem`
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=800 height=450>
 
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=800 height=450> 
+## Footprint
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif.gif?raw=true" width=800 height=450>
 
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=800 height=450> 
 ## Important Classes
 -   `TiledRenderer`
     -   GeometryPass, LightPass, ShadowDepthBuffer 클래스 들을 멤버로 소유 하며, 랜더링의 주체로 랜더링 흐름과 랜더링 스래드를 관리 합니다.

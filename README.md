@@ -50,7 +50,8 @@
             -   ShadowDepthBuffer::RenderPointLightShadowDepth
 
 ## Footprint
--   `구현방법`  
+-   `구현`   
+    -   Unreal ShadowDepth 렌더링코드를 참조하거나 일부 코드를 재사용 하여 구현.
     -   Footprint를 남기는 FootprintCaster(캐릭터)와 Footprint가 표면에 남게 되는 FootprintReceiver(랜드스케이프 또는 바닥메쉬)로 구분.
         -   구분을 위해 PrimitiveComponent에 프로퍼티 추가.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>

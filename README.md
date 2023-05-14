@@ -5,7 +5,8 @@
 ## Raytracing
 -   `Raytracing`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=800 height=450>
--   `ParticleSystem`
+
+-   `Raytracing with ParticleSystem`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=800 height=450>
 
 ## Footprint

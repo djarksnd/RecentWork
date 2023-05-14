@@ -4,14 +4,14 @@
 
 ## Raytracing
 -   `Reflection & Global illumination`
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=700 height=400>
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>
 
 -   `ParticleSystem with Hybrid Rendering`
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=700 height=400>
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=600 height=350>
 
 ## Footprint
 -   `Character Footprint`
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=700 height=400>
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=600 height=350>
 
 ## Important Classes
 -   `TiledRenderer`

@@ -2,7 +2,7 @@
 
 최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 설명 입니다.
 
-## ㅇ
+## 결과물
 -   `Raytracing`
     -   Reflection & Global illumination
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>

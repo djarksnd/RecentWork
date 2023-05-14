@@ -50,12 +50,15 @@
             -   ShadowDepthBuffer::RenderPointLightShadowDepth
 
 ## Footprint
--   `구현방법`
+-   `구현방법`  
     -   Footprint를 남기는 FootprintCaster(캐릭터)와 Footprint가 표면에 남게 되는 FootprintReceiver(랜드스케이프 또는 바닥메쉬)로 구분.
-        -   PrimitiveComponent에 프로퍼티 추가.
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=200>
-
-
+        -   구분을 위해 PrimitiveComponent에 프로퍼티 추가.
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>
+    -   FootprintActor의 Volume(Frustum)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintActor.png?raw=true" width=400 height=220>
+        -   최적화를 위해 Unreal Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)를 활용하여 컬링처리.
+    -   깊이 & 스텐실버퍼 바인딩 후 FootprintCaster 와 FootprintReceiver 렌더링  
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
 
     -   Footprint
     -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.

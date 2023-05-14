@@ -6,11 +6,11 @@
 -   `Reflection & Global illumination`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=800 height=450>
 
--   `ParticleSystem`
+-   `ParticleSystem with Hybrid Rendering`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=800 height=450>
 
 ## Footprint
--   `Footprint`
+-   `Character Footprint`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=800 height=450>
 
 ## Important Classes

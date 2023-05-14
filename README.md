@@ -3,7 +3,7 @@
 최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 문서 입니다.
 
 ## Raytracing
--   `Raytracing`
+-   `Raytracing Reflection & Global illumination`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=800 height=450>
 
 -   `Raytracing with ParticleSystem`

@@ -56,44 +56,12 @@
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>
     -   FootprintActor의 Volume(Frustum)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintActor.png?raw=true" width=400 height=220>
-        -   최적화를 위해 Unreal Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)를 활용.
+        -   최적화를 위해 Unreal Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)활용.
     -   깊이 & 스텐실버퍼 바인딩 후 FootprintCaster와 FootprintReceiver 렌더링
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
-        -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹.
+        -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹(FootprintMask Texture).
             -   FootprintCaster DepthTest Function - Less Equal
             -   FootprintReceiver DepthTest Function - Greater Than
-            
-
-    -   Footprint
-    -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.
-        -   TiledRenderer.cpp
-            -   TiledRenderer::Render
-            -   TiledRenderer::FlushRenderTasks
-            -   TiledRenderer::RenderingThreadProc
--   `GeometryPass`
-    -   씬에 존재하는 오브젝트들의 기하정보를 2개의 [GeometryBuffer](https://en.wikipedia.org/wiki/Glossary_of_computer_graphics#g-buffer)(_DiffuseSpecular_, _NormalGlossiness_)에 기록 합니다.
-        -   DiffuseSpecular [R8G8B8A8]
-            -   RGB = DiffuseColor
-            -   A = Specular intensity
-        -   NormalGlossiness [R10G10B10A2]
-            -   RG = WorldNormal.XY
-            -   B = Glossiness
-            -   A = Sign of WorldNormal.Z
-    -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.
-        -   GeometryPassPixelShader.hlsl
-            -   main
--   `LightPass`
-    -   ComputeShader를 통해 여러개의 격자로 분할된 화면 공간에 영향을 미치는 조명들의 색인을 계산합니다.
-    -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.
-        - LightCullingComputeShader.hlsl
-            -   main  
-        - LightPass.cpp
-            -   LightPass::CullLights
--   `ShadowDepthBuffer`
-    -   화면에 표시될 그림자들의 ShadowDepthMap을 랜더링 합니다.
-    -   PointLight의 그림자를 표현하기 위해 필요한 6면의 ShadowDepthMap을 GeometryShader와 RenderTargetArray를 이용해 One - Pass로 랜더링 합니다.
-    -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.
-        -   ShadowDepthGeometryShader.hlsl
-            -   main
-        -   ShadowDepthBuffer.cpp
-            -   ShadowDepthBuffer::RenderPointLightShadowDepth
+    -  Normal 및 BaseColor 처리      
+    - 결과
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Footprint.jpg?raw=true" width=246 height=167>

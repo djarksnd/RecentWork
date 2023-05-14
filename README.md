@@ -5,7 +5,7 @@
 ## ㅇ
 -   `Raytracing`
     -   Reflection & Global illumination
-        <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>
+    <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>
     -   ParticleSystem with HybridRendering
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=600 height=350>
 

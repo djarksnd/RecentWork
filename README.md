@@ -56,7 +56,7 @@
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>
     -   FootprintActor의 Volume(Frustum)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintActor.png?raw=true" width=400 height=220>
-        -   최적화를 위해 Unreal Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)를 활용하여 컬링처리.
+        -   최적화를 위해 Unreal Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)를 활용.
     -   깊이 & 스텐실버퍼 바인딩 후 FootprintCaster 와 FootprintReceiver 렌더링  
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
 

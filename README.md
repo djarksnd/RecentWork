@@ -5,11 +5,12 @@
 ## Raytracing
 -   `Raytracing`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=800 height=450>
--   `Raytracing-ParticleSystem`
+-   `Raytracing ParticleSystem`
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=800 height=450>
 
 ## Footprint
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif.gif?raw=true" width=800 height=450>
+-   `Footprint`
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=800 height=450>
 
 ## Important Classes
 -   `TiledRenderer`

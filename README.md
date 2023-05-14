@@ -11,7 +11,7 @@ DirectX11의 [DeferredContext](https://docs.microsoft.com/en-us/windows/win32/di
 
 <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=800 height=450> 
 
-<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif.gif?raw=true" width=800 height=450> 
+<img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=800 height=450> 
 ## Important Classes
 -   `TiledRenderer`
     -   GeometryPass, LightPass, ShadowDepthBuffer 클래스 들을 멤버로 소유 하며, 랜더링의 주체로 랜더링 흐름과 랜더링 스래드를 관리 합니다.

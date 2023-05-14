@@ -57,8 +57,12 @@
     -   FootprintActor의 Volume(Frustum)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintActor.png?raw=true" width=400 height=220>
         -   최적화를 위해 Unreal Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)를 활용.
-    -   깊이 & 스텐실버퍼 바인딩 후 FootprintCaster 와 FootprintReceiver 렌더링  
+    -   깊이 & 스텐실버퍼 바인딩 후 FootprintCaster와 FootprintReceiver 렌더링
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
+        -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹.
+            -   FootprintCaster DepthTest Function - Less Equal
+            -   FootprintReceiver DepthTest Function - Greater Than
+            
 
     -   Footprint
     -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.

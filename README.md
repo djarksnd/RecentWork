@@ -2,6 +2,8 @@
 
 최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 설명 입니다.
 
+작업내용은 모드 UE4를 수정하여 구현되었습니다.
+
 ## 인게임 구현 결과
 -   `Raytracing`
     -   Reflection & Global illumination
@@ -51,7 +53,7 @@
 
 ## Footprint
 -   `구현`   
-    -   Unreal ShadowDepth 렌더링코드를 참조하거나 일부 코드를 재사용 하여 구현.
+    -   UE4 ShadowDepth 렌더링코드를 참조하거나 일부 코드를 재사용 하여 구현.
     -   Footprint를 남기는 FootprintCaster(캐릭터)와 Footprint가 표면에 남게 되는 FootprintReceiver(랜드스케이프 또는 바닥메쉬)로 구분.
         -   구분을 위해 PrimitiveComponent에 프로퍼티 추가.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>

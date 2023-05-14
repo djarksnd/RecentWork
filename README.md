@@ -1,6 +1,6 @@
 # README
 
-최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 문서 입니다.
+최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 설명 입니다.
 
 ## Raytracing
 -   `Reflection & Global illumination`

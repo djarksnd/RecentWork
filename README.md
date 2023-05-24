@@ -4,7 +4,7 @@
 
 작업내용은 모드 UE4를 수정하여 구현되었습니다.
 
-## 인게임 구현 결과
+## 구현 결과
 -   `Raytracing`
     -   Reflection & Global illumination
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>

@@ -48,6 +48,14 @@
         -   레스터화 렌더링 이 후 적은수로 제한된 ParticleSystem입자를 사용해 반투명 레이트레이싱 반사 계산.   
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXHybrid.jpg?raw=true" width=200 height=200> 
 
+-   `DepthFade`
+    -   반투명 재질의 경우 SceneDepth표현식을 사용하는 경우가 있다.
+    -   하지만 UE4 레이트레이싱에선 SceneDepth를 사용 할 수 없다.
+        -   카메라의 옆이나 뒤 처럼 Depth 버퍼에 기록 되지 않은 부분도 계산해야 하기 떄문.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=300 height=175>
+        -   https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png
+
+
 ## Footprint
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
 -   `Footprint`

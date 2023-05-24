@@ -17,6 +17,7 @@
 
 ## Raytracing
 -   `Reflection`
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXReflection.png?raw=true" width=900 height=200>    
     -   최적화를 위해 물체표면의 러프니스와 메탈릭 수치에 따라 픽셀당 광선의 반사 횟수를 0 ~ 3회 사이로 동적으로 변경되도록 수정.
     -   광선의 최대 반사 횟수를 넘을 경우 환경맵핑 수행.
     -   레이트레이싱에서 Additive Blend Mode 와 Modulate Blend Mode 를 표현 할수 있도록 수정.
@@ -24,9 +25,9 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucent.jpg?raw=true" width=600 height=250>
 
 -   `Global illumination`
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXGI.png?raw=true" width=600 height=150>    
     -   NVidia의 RTXGI플러그인 적용.
         -   https://developer.nvidia.com/rtx/ray-tracing/rtxgi
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXGI.png?raw=true" width=600 height=200> 
     -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 받을 수 있도록 플러그인 수정.
     
 -   `ParticleSystem`

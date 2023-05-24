@@ -26,6 +26,7 @@
 -   `Global illumination`
     -   NVidia의 RTXGI플러그인 적용.
         -   https://developer.nvidia.com/rtx/ray-tracing/rtxgi
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXGI.png?raw=true" width=600 height=200> 
     -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 받을 수 있도록 플러그인 수정.
     
 -   `ParticleSystem`
@@ -58,7 +59,7 @@
         -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 동일하지 않다.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=600 height=400> 
     -   반투명 레이트레이싱에서 SceneDepth와 PixelDepth를 이용한 DepthFade.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucentFade.jpg?raw=true" width=600 height=400>    
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucentFade.jpg?raw=true" width=300 height=200>    
 
 
 ## Footprint

@@ -60,8 +60,10 @@
     -   FootprintCaster와 FootprintReceiver를 2Pass로 나누어 렌더링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
         -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹(FootprintMask Texture).
-            -   FootprintCaster DepthTest Function - Less Equal
-            -   FootprintReceiver DepthTest Function - Greater Than
-    -  Normal 및 BaseColor 처리      
+    -  마스킹결과를 이전 프레임의 FootprintMaskBuffer와 블렌딩.
+         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMask.png?raw=true" width=246 height=167>
+    -  현재 프레임의 FootprintMaskBuffer를 이용하여 FootprintTangentBuffer 생성
+         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintNormalMap.png?raw=true" width=246 height=167>
+    -  FootprintMaskBuffer와 FootprintTangentBuffer를 사용하여 최종 결과물 생성.    
     - 결과
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Footprint.jpg?raw=true" width=246 height=167>

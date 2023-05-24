@@ -17,7 +17,12 @@
 
 ## Raytracing
 -   `Reflection`
-    -   GeometryPass, LightPass, ShadowDepthBuffer 클래스 들을 멤버로 소유 하며, 랜더링의 주체로 랜더링 흐름과 랜더링 스래드를 관리 합니다.
+    -   Reflection
+        -   최적화를 물체표면의 러프니스와 메탈릭 수치에 따라 픽셀당 광선의 반사 횟수를 0 ~ 3회 사이로 동적으로 변경.
+        -   광선의 최대 반사 횟수를 넘을 경우 환경맵핑 수행.
+        -   레이트레이싱에서 Additive Blend와 Modulate Blend모드를 표현 할수 있도록 수정.
+        -   불투명표면과 반투명표면간 반사가 일어날 수 있도록 수정.
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucent.jpg?raw=true" width=600 height=350>    
     -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.
         -   TiledRenderer.cpp
             -   TiledRenderer::Render
@@ -28,14 +33,14 @@
     -   https://developer.nvidia.com/rtx/ray-tracing/rtxgi
     -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 주거나 받을 수 있도록 플러그인 코드수정.
     
-   
 -   `ParticleSystem with HybridRendering`
-    -   ComputeShader를 통해 여러개의 격자로 분할된 화면 공간에 영향을 미치는 조명들의 색인을 계산합니다.
-    -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.
-        - LightCullingComputeShader.hlsl
-            -   main  
-        - LightPass.cpp
-            -   LightPass::CullLights
+    -   ParticleSystem 지원
+        -   UE4는 CascadeParticleSystem의 레이트레이싱을 지원하지 않음.
+        -   따라서 게임에서 가장 많이 사용 되는 MeshParticle과 SpriteParticle이 레이트레이싱 지원 가능 하도록 기능 구현.
+            -   가속화구조를 위한 동적 버텍스버퍼 추가.
+            -   레이트레이싱 쉐이더에서 ParticleSystem의 머티리얼 정보를 가져올 수 있도록(위치, 색상, UV 등) MeshParticle과 SpriteParticle의 버텍스펙토리 수정.
+    -   HybridRendering
+        -   ㄹ
 
 ## Footprint
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>

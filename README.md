@@ -55,8 +55,7 @@
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
 -   `구현`   
     -   UE4 ShadowDepthRendering 코드를 참조하여 구현.
-    -   Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver로 구분.
-         -   구분을 위해 PrimitiveComponent에 프로퍼티 추가.
+    -   PrimitiveComponent에 프로퍼티를 추가하여 Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver로 구분.
          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>
     -   Footprint영역(AABBox)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
         -   최적화를 위해 Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)활용.

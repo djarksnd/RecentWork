@@ -59,7 +59,7 @@
         -   최적화를 위해 Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)활용.
     -   FootprintCaster와 FootprintReceiver를 2Pass로 나누어 렌더링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
-        -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹(FootprintMask Texture).
+        -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹.
     -  마스킹결과를 이전 프레임의 FootprintMaskBuffer와 블렌딩.
          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMask.png?raw=true" width=246 height=167>
     -  현재 프레임의 FootprintMaskBuffer를 이용하여 FootprintTangentBuffer 생성

@@ -38,7 +38,7 @@
             -   레이트레이싱 쉐이더에서 ParticleSystem의 머티리얼 정보(위치, 색상, UV 등)를 가져올 수 있도록 동적버퍼(UAV) 추가 및 MeshParticle과 SpriteParticle의 버텍스펙토리 수정.
     -   HybridRendering
         -   다량의 입자를 사용하는 ParticleSystem은 입자들이 겹치는 부분에서 아티펙트가 발생.
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticle.jpg?raw=true" width=300 height=100>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticle.jpg?raw=true" width=300 height=300>
             -   레이 충돌검사 시 self intersection 방지를 위한 TMin값에 의해 발생하는 현상. 
             -   
 ## Footprint

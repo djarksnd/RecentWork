@@ -27,7 +27,7 @@
 -   `Global illumination`
     -   NVidia의 RTXGI플러그인 적용.
         -   https://developer.nvidia.com/rtx/ray-tracing/rtxgi
-    -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 주거나 받을 수 있도록 플러그인 코드수정.
+    -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 받을 수 있도록 플러그인 수정.
     
 -   `ParticleSystem with HybridRendering`
     -   ParticleSystem 레이트레이싱 지원

@@ -52,6 +52,7 @@
             -   ShadowDepthBuffer::RenderPointLightShadowDepth
 
 ## Footprint
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
 -   `구현`   
     -   UE4 ShadowDepthRendering 코드를 참조하여 구현.
     -   Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver로 구분.
@@ -65,5 +66,4 @@
     -  현재 프레임의 FootprintMaskBuffer를 이용하여 FootprintTangentBuffer 생성
          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintNormalMap.png?raw=true" width=246 height=167>
     -  FootprintMaskBuffer와 FootprintTangentBuffer를 사용하여 최종 결과물 생성.    
-    - 결과
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Footprint.jpg?raw=true" width=246 height=167>

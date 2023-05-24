@@ -45,9 +45,9 @@
     -   다량의 반투명 입자를 사용하는 ParticleSystem을 레이트레이싱에 그대로 사용 할 경우 게임성능이 심각하게 저하.
         -   레이트레이싱에서 ParticleSystem당 표현가능 한 최대 입자의 수를 매우 적게 제한하여 해결.
         -   하지만 카메라에 직접 보이는 ParticleSystem의 입자를 줄일 경우 품질저하 발생.
-    -   위의 문제들을 해결하기 위해 하이브리드 렌더링 사용.
+    -   위의 문제들을 해결하기 위해 하이브리드 렌더링 구현.
         -   기존의 레스터화 렌더링과 레이트레이싱을 함께 사용.     
-        -   카메라에 직접 보여지는 ParticleSystem의 입자들은 기존의 레스터화 방식으로 렌더링.
+        -   카메라에 직접 보여지는 반투명 ParticleSystem의 입자들은 기존의 레스터화 방식으로 렌더링.
         -   레스터화 렌더링 이 후 적은수로 제한된 ParticleSystem입자를 사용해 반투명 레이트레이싱 반사 계산.   
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXHybrid.jpg?raw=true" width=200 height=200> 
 

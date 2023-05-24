@@ -22,7 +22,7 @@
     -   광선의 최대 반사 횟수를 넘을 경우 환경맵핑 수행.
     -   레이트레이싱에서 Additive Blend Mode 와 Modulate Blend Mode 를 표현 할수 있도록 수정.
     -   불투명표면과 반투명표면간 반사가 일어날 수 있도록 수정.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucent.jpg?raw=true" width=600 height=250>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucent.jpg?raw=true" width=300 height=150>
 
 -   `Global illumination`
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXGI.png?raw=true" width=600 height=150>    

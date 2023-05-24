@@ -53,14 +53,11 @@
 
 ## Footprint
 -   `구현`   
-    -   UE4 ShadowDepth 렌더링코드를 참조하거나 일부 코드를 재사용 하여 구현.
-    -   Footprint를 남기는 FootprintCaster(캐릭터)와 Footprint가 표면에 남게 되는 FootprintReceiver(랜드스케이프 또는 바닥메쉬)로 구분.
-        -   구분을 위해 PrimitiveComponent에 프로퍼티 추가.
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>
-    -   FootprintActor의 Volume(Frustum)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintActor.png?raw=true" width=400 height=220>
-        -   최적화를 위해 Unreal Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)활용.
-    -   깊이 & 스텐실버퍼 바인딩 후 FootprintCaster와 FootprintReceiver 렌더링
+    -   UE4 ShadowDepthRendering 코드를 참조하여 구현.
+    -   Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver로 구분.
+    -   Footprint영역(AABBox)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
+        -   최적화를 위해 Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)활용.
+    -   FootprintCaster와 FootprintReceiver를 2Pass로 나누어 렌더링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
         -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹(FootprintMask Texture).
             -   FootprintCaster DepthTest Function - Less Equal

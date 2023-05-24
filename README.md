@@ -17,7 +17,7 @@
 
 ## Raytracing
 -   `Reflection`
-    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXReflection.png?raw=true" width=900 height=200>    
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXReflection.png?raw=true" width=1000 height=200>    
     -   최적화를 위해 물체표면의 러프니스와 메탈릭 수치에 따라 픽셀당 광선의 반사 횟수를 0 ~ 3회 사이로 동적으로 변경되도록 수정.
     -   광선의 최대 반사 횟수를 넘을 경우 환경맵핑 수행.
     -   레이트레이싱에서 Additive Blend Mode 와 Modulate Blend Mode 를 표현 할수 있도록 수정.

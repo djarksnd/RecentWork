@@ -1,6 +1,6 @@
 # README
 
-최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 설명 입니다.
+최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 간략한 개요 입니다.
 
 작업내용은 모드 UE4를 수정하여 구현되었습니다.
 

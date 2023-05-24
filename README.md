@@ -31,6 +31,7 @@
     -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 받을 수 있도록 플러그인 수정.
     
 -   `ParticleSystem`
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleReflection.jpg?raw=true" width=200 height=150> 
     -   ParticleSystem 레이트레이싱 지원
         -   UE4는 CascadeParticleSystem의 레이트레이싱을 지원하지 않음.
         -   따라서 게임에서 가장 많이 사용 되는 MeshParticle과 SpriteParticle이 레이트레이싱 지원 가능 하도록 기능 구현.

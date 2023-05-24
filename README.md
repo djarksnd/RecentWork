@@ -18,11 +18,11 @@
 ## Raytracing
 -   `Reflection`
     -   Reflection
-        -   최적화를 물체표면의 러프니스와 메탈릭 수치에 따라 픽셀당 광선의 반사 횟수를 0 ~ 3회 사이로 동적으로 변경.
+        -   최적화를 위해 물체표면의 러프니스와 메탈릭 수치에 따라 픽셀당 광선의 반사 횟수를 0 ~ 3회 사이로 동적으로 변경.
         -   광선의 최대 반사 횟수를 넘을 경우 환경맵핑 수행.
         -   레이트레이싱에서 Additive Blend와 Modulate Blend모드를 표현 할수 있도록 수정.
         -   불투명표면과 반투명표면간 반사가 일어날 수 있도록 수정.
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucent.jpg?raw=true" width=600 height=350>    
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucent.jpg?raw=true" width=600 height=200>    
     -   주요 코드는 아래의 함수에서 확인하실 수 있습니다.
         -   TiledRenderer.cpp
             -   TiledRenderer::Render

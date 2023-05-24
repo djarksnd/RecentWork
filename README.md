@@ -57,7 +57,8 @@
         -   PixelDepth 표현식은 레이트레이싱 쉐이더에서 HLSL의 RayTCurrent 함수를 사용하도록 레핑.
         -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 동일하지 않다.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=600 height=400> 
-        -   https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png
+    -   반투명 레이트레이싱에서 SceneDepth와 PixelDepth를 이용한 DepthFade.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucentFade.jpg?raw=true" width=600 height=400>    
 
 
 ## Footprint

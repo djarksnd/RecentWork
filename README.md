@@ -55,7 +55,7 @@
     -   UE4 반투명 레이트레이싱은 최적화를 위해 가장 가까운 불투명 표면까지의 거리를 계산 하여 레이의 길이를 조절한다.
         -   이 때 계산된 불투명 표면까지의 거리를 반투명 레이트레이싱 Payload에 적제하여 반투명 레이트레이싱 계산동안 사용할 수 있도록 수정.
         -   단 이때 계산된 거리는 SceneDepth와는 동일하지 않다.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=450 height=600> 
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=600 height=400> 
         -   https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png
 
 

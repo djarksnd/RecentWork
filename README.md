@@ -18,7 +18,7 @@
 ## Raytracing
 -   `Reflection`
     -   Reflection
-        -   최적화를 위해 물체표면의 러프니스와 메탈릭 수치에 따라 픽셀당 광선의 반사 횟수를 0 ~ 3회 사이로 동적으로 변경.
+        -   최적화를 위해 물체표면의 러프니스와 메탈릭 수치에 따라 픽셀당 광선의 반사 횟수를 0 ~ 3회 사이로 동적으로 변경되도록 수정.
         -   광선의 최대 반사 횟수를 넘을 경우 환경맵핑 수행.
         -   레이트레이싱에서 Additive Blend Mode 와 Modulate Blend Mode 를 표현 할수 있도록 수정.
         -   불투명표면과 반투명표면간 반사가 일어날 수 있도록 수정.
@@ -26,7 +26,7 @@
 
 -   `Global illumination`
     -   NVidia의 RTXGI플러그인 적용.
-    -   https://developer.nvidia.com/rtx/ray-tracing/rtxgi
+        -   https://developer.nvidia.com/rtx/ray-tracing/rtxgi
     -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 주거나 받을 수 있도록 플러그인 코드수정.
     
 -   `ParticleSystem with HybridRendering`

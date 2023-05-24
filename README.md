@@ -45,7 +45,7 @@
     -   위의 문제들을 해결하기 위해 하이브리드 렌더링 사용.
         -   기존의 레스터화 렌더링과 레이트레이싱을 함께 사용.     
         -   카메라에 직접 보여지는 ParticleSystem의 입자들은 기존의 레스터화 방식으로 렌더링.
-        -   레스터화 렌더링 이 후 적은수로 제한된 ParticleSystem입자를 사용해 반투명 레이트레이싱 계산.
+        -   레스터화 렌더링 이 후 적은수로 제한된 ParticleSystem입자를 사용해 반투명 레이트레이싱 반사 계산.   
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXHybrid.jpg?raw=true" width=200 height=200> 
 
 ## Footprint

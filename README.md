@@ -69,4 +69,4 @@
     -  FootprintMaskBuffer와 FootprintTangentBuffer를 사용하여 최종 결과물 생성.    
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Footprint.jpg?raw=true" width=246 height=167>
     -  아트팀에서 Footprint를 간단하게 사용 할 수 있도록 FootprintMask노드와 TransformFootprintTS노드를 추가.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=300>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=270>

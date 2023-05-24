@@ -37,10 +37,18 @@
             -   가속화구조를 위한 동적 버텍스버퍼 추가.(레이 충돌에 사용되는 Position Only 지오메트리)
             -   레이트레이싱 쉐이더에서 ParticleSystem의 머티리얼 정보(위치, 색상, UV 등)를 가져올 수 있도록 동적버퍼(UAV) 추가 및 MeshParticle과 SpriteParticle의 버텍스펙토리 수정.
     -   HybridRendering
-        -   다량의 입자를 사용하는 ParticleSystem은 입자들이 겹치는 부분에서 아티펙트가 발생.
+        -   다량의 반투명 입자를 사용하는 ParticleSystem은 입자들이 겹치는 부분에서 아티펙트 발생.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticle.jpg?raw=true" width=200 height=200>
-            -   레이 충돌검사 시 self intersection 방지를 위한 TMin값에 의해 발생하는 현상. 
-            -   
+            -   레이 충돌검사 시 self intersection 방지를 위한 TMin값에 의해 발생하는 현상.
+        -   다량의 반투명 입자를 사용하는 ParticleSystem을 레이트레이싱에 그대로 사용 할 경우 게임성능이 심각하게 저하.
+            -   레이트레이싱에서 ParticleSystem당 표현가능 한 최대 입자의 수를 매우 적게 제한하여 해결.
+            -   하지만 카메라에 직접 보이는 ParticleSystem의 입자를 줄일 경우 품질저하 발생.
+        -   위의 문제들을 해결하기 위해 하이브리드 렌더링 사용.
+            -   기존의 레스터화 렌더링과 레이트레이싱을 함께 사용.     
+            -   카메라에 직접 보여지는 ParticleSystem의 입자들은 기존의 레스터화 방식으로 렌더링.
+            -   레스터화 렌더링 이 후 적은수로 제한된 ParticleSystem입자를 사용해 반투명 레이트레이싱 계산.
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXHybrid.jpg?raw=true" width=200 height=200>  
+   
 ## Footprint
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
 -   `구현`

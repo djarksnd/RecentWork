@@ -55,7 +55,7 @@
     -   하지만 UE4 반투명 레이트레이싱은 최적화를 위해 가장 가까운 불투명 표면까지의 거리를 계산 하여 레이의 길이를 조절한다.
         -   이 때 계산된 불투명 표면까지의 거리를 반투명 레이트레이싱 Payload에 적제하여 반투명 레이트레이싱 계산동안 SceneDepth표현식으로 사용할 수 있도록 레핑.
         -   PixelDepth 표현식은 레이트레이싱 쉐이더에서 HLSL의 RayTCurrent 함수를 사용하도록 레핑.
-        -   단 이때 계산된 거리는 SceneDepth 와 PixelDepth 는 레스터렌더링에서의 값과 동일하지 않다.
+        -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 동일하지 않다.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=600 height=400> 
         -   https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png
 

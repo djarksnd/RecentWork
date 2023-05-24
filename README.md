@@ -53,9 +53,9 @@
     -   하지만 UE4 레이트레이싱에선 SceneDepth표현식을 사용 할 수 없다.
         -   레이트레이싱에선 카메라의 옆이나 뒤 처럼 Depth 버퍼에 기록 할 수 없는 부분도 계산해야 하기 떄문.
     -   UE4 반투명 레이트레이싱은 최적화를 위해 가장 가까운 불투명 표면까지의 거리를 계산 하여 레이의 길이를 조절한다.
-        -   이 때 계산된 불투명 표면까지의 거리를 반투명 레이트레이싱 Payload에 적제하여 반투명 레이트레이싱 게산동안 사용할 수 있도록 수정.
+        -   이 때 계산된 불투명 표면까지의 거리를 반투명 레이트레이싱 Payload에 적제하여 반투명 레이트레이싱 계산동안 사용할 수 있도록 수정.
         -   단 이때 계산된 거리는 SceneDepth와는 동일하지 않다.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=450 height=500> 
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=450 height=600> 
         -   https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png
 
 

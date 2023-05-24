@@ -23,7 +23,11 @@
             -   TiledRenderer::Render
             -   TiledRenderer::FlushRenderTasks
             -   TiledRenderer::RenderingThreadProc
--   `GeometryPass`
+-   `Global illumination`
+    -   NVidia의 RTXGI플러그인 적용.
+    -   https://developer.nvidia.com/rtx/ray-tracing/rtxgi
+    -   BaseColor가 다소 어둡게 제작된 기존의 에섯들이 GI에 효과적으로 영향을 주거나 받을 수 있도록 플러그인 코드수정.
+    
     -   씬에 존재하는 오브젝트들의 기하정보를 2개의 [GeometryBuffer](https://en.wikipedia.org/wiki/Glossary_of_computer_graphics#g-buffer)(_DiffuseSpecular_, _NormalGlossiness_)에 기록 합니다.
         -   DiffuseSpecular [R8G8B8A8]
             -   RGB = DiffuseColor

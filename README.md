@@ -56,8 +56,7 @@
             -   ShadowDepthBuffer::RenderPointLightShadowDepth
 
 ## Footprint
--   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
--   `구현`   
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>  
     -   UE4 ShadowDepthRendering 코드를 참조하여 구현.
     -   PrimitiveComponent에 프로퍼티를 추가하여 Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver로 구분.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>

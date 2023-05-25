@@ -60,7 +60,7 @@
         -   위의 표현식 레핑으로 기존의 머티리얼을 수정 없이 사용가능.
         -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 동일하지 않다.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=600 height=400> 
-    -   반투명 레이트레이싱에서 SceneDepth와 PixelDepth를 이용한 DepthFade.
+    -   반투명 레이트레이싱에서 SceneDepth와 PixelDepth 표현식을 이용한 DepthFade 머티리얼.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucentFade.jpg?raw=true" width=300 height=200>    
 
 

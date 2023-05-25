@@ -35,7 +35,7 @@
         -   UE4는 CascadeParticleSystem의 레이트레이싱을 지원하지 않음.
         -   따라서 게임에서 가장 많이 사용 되는 MeshParticle과 SpriteParticle이 레이트레이싱 지원 가능 하도록 기능 구현.
             -   가속화구조를 위한 동적 버텍스버퍼 추가.(레이 충돌에 사용되는 Position Only 지오메트리)
-            -   레이트레이싱 쉐이더에서 ParticleSystem의 머티리얼 정보(위치, 색상, UV 등)를 가져올 수 있도록 동적버퍼(UAV) 추가 및 MeshParticle과 SpriteParticle의 버텍스펙토리 수정.
+            -   레이트레이싱 쉐이더에서 ParticleSystem의 머티리얼 및 입자의 정보(라이프타임, 위치, 색상, UV 등)들을 가져올 수 있도록 동적버퍼(UAV) 추가 및 MeshParticle과 SpriteParticle의 버텍스펙토리 수정.
 
 -   `HybridRendering`
     -   다량의 반투명 입자를 사용하는 ParticleSystem은 입자들이 겹치는 부분에서 아티펙트 발생.

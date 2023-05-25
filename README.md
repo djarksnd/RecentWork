@@ -1,7 +1,7 @@
 # README
 
 최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 간략한 개요 입니다.
--사용엔진 UE4-
+사용엔진 UE4
 
 ## 구현 결과
 -   `Raytracing`

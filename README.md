@@ -1,6 +1,7 @@
 # README
 
 -   최근작업한 내용인 Raytracing 과 Footprint 기능에 대한 간략한 개요 입니다.
+-   작업환경 UE4, VS2017
 
 ## 구현 결과
 -   `Raytracing`

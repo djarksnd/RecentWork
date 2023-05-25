@@ -52,7 +52,7 @@
 
 -   `SceneDepth & PixelDepth Expression`
     -   반투명 재질의 경우 SceneDepth 와 PixelDepth 표현식을 사용하는 경우가 많다.
-    -   UE4 레이트레이싱에선 재질의 SceneDepth 와 PixelDepth 표현식을 사용 할 수 없다.
+    -   UE4 레이트레이싱에선 재질의 SceneDepth 와 PixelDepth 등의 스크린기반 표현식을 사용 할 수 없다.
         -   레이트레이싱에선 카메라의 옆이나 뒤 처럼 시야를 벗어나는 부분도 계산해야 하기 때문.
     -   하지만 UE4 반투명 레이트레이싱은 최적화를 위해 가장 가까운 불투명 표면까지의 거리를 계산 하여 레이의 길이를 조절한다.
         -   이 때 계산된 불투명 표면까지의 거리를 반투명 레이트레이싱 Payload에 적제하여 반투명 레이트레이싱 계산동안 SceneDepth표현식으로 사용할 수 있도록 레핑.

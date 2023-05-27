@@ -58,7 +58,7 @@
         -   이 때 계산된 불투명 표면까지의 거리를 반투명 레이트레이싱 Payload에 적제하여 반투명 레이트레이싱 계산동안 SceneDepth표현식으로 사용할 수 있도록 쉐이더코드에서 기존 표현식 레핑.
         -   PixelDepth 표현식은 레이트레이싱 쉐이더에서 HLSL의 RayTCurrent 함수를 사용하도록 쉐이더코드에서 기존 표현식 레핑.
         -   위의 표현식 레핑으로 기존의 머티리얼을 수정 없이 사용가능.
-        -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 동일하지 않다.
+        -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 약간의 차이가 있다.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=600 height=400> 
     -   반투명 레이트레이싱에서 SceneDepth와 PixelDepth 표현식을 이용한 DepthFade 머티리얼.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucentFade.jpg?raw=true" width=300 height=200>    

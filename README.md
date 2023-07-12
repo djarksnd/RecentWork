@@ -10,7 +10,7 @@
     -   ParticleSystem with HybridRendering
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=600 height=350>
 
--   `Footprint`
+-   `Footprint (지형에 흔적 남기기)`
     -   Character Footprint
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=600 height=350>
 

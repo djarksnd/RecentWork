@@ -4,13 +4,13 @@
 -   UE4를 이용해 구현되었습니다.
 
 ## 구현 결과
--   `Raytracing` -PC Only-
+-   `Raytracing` [PC Only]
     -   Reflection & Global illumination
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>
     -   ParticleSystem with HybridRendering
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=600 height=350>
 
--   `Footprint (지형에 흔적 남기기)` -PC & Mobile-
+-   `Footprint (지형에 흔적 남기기)` [PC & Mobile]
     -   Character Footprint
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=600 height=350>
 

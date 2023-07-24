@@ -4,13 +4,13 @@
 -   UE4를 이용해 구현되었습니다.
 
 ## 구현 결과
--   `Raytracing`
+-   `Raytracing` [PC Only]
     -   Reflection & Global illumination
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>
     -   ParticleSystem with HybridRendering
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=600 height=350>
 
--   `Footprint`
+-   `Footprint (지형에 흔적 남기기)` [PC & Mobile]
     -   Character Footprint
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=600 height=350>
 
@@ -53,14 +53,14 @@
 -   `SceneDepth & PixelDepth Expression`
     -   반투명 재질의 경우 SceneDepth 와 PixelDepth 표현식을 사용하는 경우가 많다.
     -   UE4 레이트레이싱에선 재질의 SceneDepth 와 PixelDepth 등의 스크린기반 표현식을 사용 할 수 없다.
-        -   레이트레이싱에선 카메라의 옆이나 뒤 처럼 시야를 벗어나는 부분도 계산해야 하기 때문.
+        -   레이트레이싱에선 카메라의 옆이나 뒤 처럼 시야(스크린영역)를 벗어나는 부분도 계산해야 하기 때문.
     -   하지만 UE4 반투명 레이트레이싱은 최적화를 위해 가장 가까운 불투명 표면까지의 거리를 계산 하여 레이의 길이를 조절한다.
         -   이 때 계산된 불투명 표면까지의 거리를 반투명 레이트레이싱 Payload에 적제하여 반투명 레이트레이싱 계산동안 SceneDepth표현식으로 사용할 수 있도록 쉐이더코드에서 기존 표현식 레핑.
         -   PixelDepth 표현식은 레이트레이싱 쉐이더에서 HLSL의 RayTCurrent 함수를 사용하도록 쉐이더코드에서 기존 표현식 레핑.
         -   위의 표현식 레핑으로 기존의 머티리얼을 수정 없이 사용가능.
-        -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 동일하지 않다.
+        -   단 이때 계산된 SceneDepth 와 PixelDepth 표현식의 값은 레스터화 렌더링에서의 값과 약간의 차이가 있다.
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXSceneDepth.png?raw=true" width=600 height=400> 
-    -   반투명 레이트레이싱에서 SceneDepth와 PixelDepth 표현식을 이용한 DepthFade 머티리얼.
+    -   수정 내용을 적용해 반투명 레이트레이싱에서 SceneDepth와 PixelDepth 표현식을 이용한 DepthFade 처리(수면과 지면이 닿는 부분).
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXTranslucentFade.jpg?raw=true" width=300 height=200>    
 
 

@@ -89,12 +89,25 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=270>
 
 ## FoliageInteraction
--   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=150 height=150>
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=200 height=200>
 -   `FoliageInteraction`
     -   FoliageInteractionComponent 클래스를 제작하여 구현.
     -   ShadowDepthPass 이전 FoliageInteractionBufferPass 에서 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성
          -------FIBuffer--------------
     -   Foliage용 Material에서 FoliageInteractionBuffer를 통해 폴리지의 움직임을 시각적으로 구현.
          ------ Material Node ------------
-    -   Foliage와 상호작용할 형태를 조절하기 위해 FoliageInteractionComponent에 Force, DirectionIntensity, Angle 3가지 속성 구현.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=300 height=120> 
+    -   상호작용 강도와 형태를 제어하기 위해 FoliageInteractionComponent에 Force, DirectionIntensity, Angle 3가지 속성 구현.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=300 height=200>
+        -   DirectionIntensity = 0, Angle = 360
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionCircle.png?raw=true" width=300 height=200>
+        -   DirectionIntensity = 0.5, Angle = 360
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionHalfDirection.png?raw=true" width=300 height=200>
+        -   DirectionIntensity = 1, Angle = 360
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionDirectionOnly.png?raw=true" width=300 height=200>
+        -   DirectionIntensity = 0, Angle = 90
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionFanShape.png?raw=true" width=300 height=200>
+
+
+
+            
+            

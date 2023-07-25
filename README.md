@@ -92,7 +92,7 @@
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=200 height=200>
 -   `FoliageInteraction`
     -   FoliageInteractionComponent 클래스를 제작하여 구현.
-    -   ShadowDepthPass 이전 FoliageInteractionBufferPass 에서 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성
+    -   ShadowDepthPass 이전(폴리지의 흔들림이 적용된 그림자를 그리기 위해 ShadowDepthPass 이전에 렌더링) FoliageInteractionBufferPass 를 추가하여 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성.
          -------FIBuffer--------------
     -   Foliage용 Material에서 FoliageInteractionBuffer를 통해 폴리지의 움직임을 시각적으로 구현.
          ------ Material Node ------------

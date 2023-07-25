@@ -16,7 +16,7 @@
 
 -   `FoliageInteraction` [PC & Mobile]
     -   Character Footprint
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=400 height=250>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250>
 
 ## Raytracing
 -   `Reflection`
@@ -99,13 +99,13 @@
     -   상호작용 강도와 형태를 제어하기 위해 FoliageInteractionComponent에 Force, DirectionIntensity, Angle 3가지 속성 구현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=300 height=200>
         -   DirectionIntensity = 0, Angle = 360
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionCircle.png?raw=true" width=300 height=200>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionCircle.png?raw=true" width=150 height=150>
         -   DirectionIntensity = 0.5, Angle = 360
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionHalfDirection.png?raw=true" width=300 height=200>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionHalfDirection.png?raw=true" width=150 height=150>
         -   DirectionIntensity = 1, Angle = 360
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionDirectionOnly.png?raw=true" width=300 height=200>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionDirectionOnly.png?raw=true" width=150 height=150>
         -   DirectionIntensity = 0, Angle = 90
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionFanShape.png?raw=true" width=300 height=200>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionFanShape.png?raw=true" width=150 height=150>
 
 
 

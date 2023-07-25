@@ -98,14 +98,8 @@
          ------ Material Node ------------
     -   상호작용 강도와(Force) 형태를(DirectionIntensity, Angle) 쉽게 제어할수 있도록 구현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=280 height=200>
-        -   DirectionIntensity = 0, Angle = 360
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionCircle.png?raw=true" width=150 height=150>
-        -   DirectionIntensity = 0.5, Angle = 360
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionHalfDirection.png?raw=true" width=150 height=150>
-        -   DirectionIntensity = 1, Angle = 360
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionDirectionOnly.png?raw=true" width=150 height=150>
-        -   DirectionIntensity = 0, Angle = 90
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionFanShape.png?raw=true" width=150 height=150>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionProps.png?raw=true" width=400 height=500>
+
 
 
 

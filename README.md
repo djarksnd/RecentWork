@@ -6,13 +6,17 @@
 ## 구현 결과
 -   `Raytracing` [PC Only]
     -   Reflection & Global illumination
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>
-    -   ParticleSystem with HybridRendering
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=600 height=350>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250>
+    -   ParticleSystem Raytracing with HybridRendering
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=400 height=250>
 
 -   `Footprint (지형에 흔적 남기기)` [PC & Mobile]
     -   Character Footprint
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=600 height=350>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=400 height=250>
+
+-   `FoliageInteraction` [PC & Mobile]
+    -   FoliageInteraction
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
 
 ## Raytracing
 -   `Reflection`
@@ -30,7 +34,7 @@
     -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 받을 수 있도록 플러그인 수정.
     
 -   `ParticleSystem`
-    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleReflection.jpg?raw=true" width=200 height=320> 
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleReflection.jpg?raw=true" width=150 height=270> 
     -   ParticleSystem 레이트레이싱 지원
         -   UE4는 CascadeParticleSystem의 레이트레이싱을 지원하지 않음.
         -   따라서 게임에서 가장 많이 사용 되는 MeshParticle과 SpriteParticle이 레이트레이싱 지원 가능 하도록 기능 구현.
@@ -83,3 +87,27 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Footprint.jpg?raw=true" width=246 height=167>
     -  아트팀에서 Footprint를 간단하게 사용 할 수 있도록 머티리얼 에디터에서 FootprintMask노드와 TransformFootprintTS노드를 제공.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=270>
+
+## FoliageInteraction
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
+-   `FoliageInteraction`
+    -   FoliageInteractionComponent 클래스를 제작하여 구현.
+    -   ShadowDepthPass 이전(폴리지의 흔들림이 적용된 그림자를 그리기 위해 ShadowDepthPass 이전에 렌더링) FoliageInteractionBufferPass 를 추가하여 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성.
+         -------FIBuffer--------------
+    -   Foliage용 Material에서 FoliageInteractionNode를 이용해 FoliageInteractionBuffer의 정보를 가져와 폴리지의 움직임을 시각적으로 구현.
+         ------ Material Node ------------
+    -   상호작용 강도와(Force) 형태를(DirectionIntensity, Angle) 쉽게 제어할수 있도록 구현.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=280 height=200>
+        -   DirectionIntensity = 0, Angle = 360
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionCircle.png?raw=true" width=150 height=150>
+        -   DirectionIntensity = 0.5, Angle = 360
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionHalfDirection.png?raw=true" width=150 height=150>
+        -   DirectionIntensity = 1, Angle = 360
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionDirectionOnly.png?raw=true" width=150 height=150>
+        -   DirectionIntensity = 0, Angle = 90
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionFanShape.png?raw=true" width=150 height=150>
+
+
+
+            
+            

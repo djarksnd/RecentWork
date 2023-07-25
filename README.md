@@ -6,9 +6,7 @@
 ## 구현 결과
 -   `Raytracing` [PC Only]
     -   Reflection & Global illumination
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250>
-    -   ParticleSystem Raytracing with HybridRendering
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=400 height=250>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=400 height=250>
 
 -   `Footprint (지형에 흔적 남기기)` [PC & Mobile]
     -   Character Footprint

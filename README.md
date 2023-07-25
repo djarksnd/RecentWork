@@ -97,4 +97,4 @@
     -   Foliage용 Material에서 FoliageInteractionBuffer를 통해 폴리지의 움직임을 시각적으로 구현.
          ------ Material Node ------------
     -   Foliage와 상호작용할 형태를 조절하기 위해 FoliageInteractionComponent에 Force, DirectionIntensity, Angle 3가지 속성 구현.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=300 height=150> 
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=300 height=120> 

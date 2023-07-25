@@ -94,9 +94,9 @@
     -   FoliageInteractionComponent 클래스를 제작하여 구현.
     -   ShadowDepthPass 이전(폴리지의 흔들림이 적용된 그림자를 그리기 위해 ShadowDepthPass 이전에 렌더링) FoliageInteractionBufferPass 를 추가하여 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성.
          -------FIBuffer--------------
-    -   Foliage용 Material에서 FoliageInteractionBuffer를 통해 폴리지의 움직임을 시각적으로 구현.
+    -   Foliage용 Material에서 FoliageInteractionNode를 이용해 FoliageInteractionBuffer의 정보를 가져와 폴리지의 움직임을 시각적으로 구현.
          ------ Material Node ------------
-    -   상호작용 강도와 형태를 제어하기 위해 FoliageInteractionComponent에 Force, DirectionIntensity, Angle 3가지 속성 구현.
+    -   상호작용 강도와(Force) 형태를(DirectionIntensity, Angle) 쉽게 제어가능 하도록 구현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=300 height=200>
         -   DirectionIntensity = 0, Angle = 360
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionCircle.png?raw=true" width=150 height=150>

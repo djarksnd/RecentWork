@@ -6,13 +6,17 @@
 ## 구현 결과
 -   `Raytracing` [PC Only]
     -   Reflection & Global illumination
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=600 height=350>
-    -   ParticleSystem with HybridRendering
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=600 height=350>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250>
+    -   ParticleSystem Raytracing with HybridRendering
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=400 height=250>
 
 -   `Footprint (지형에 흔적 남기기)` [PC & Mobile]
     -   Character Footprint
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=600 height=350>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=400 height=250>
+
+-   `FoliageInteraction` [PC & Mobile]
+    -   Character Footprint
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=400 height=250>
 
 ## Raytracing
 -   `Reflection`
@@ -30,7 +34,7 @@
     -   BaseColor가 다소 어둡게 제작된 아트 에섯들이 GI에 효과적으로 영향을 받을 수 있도록 플러그인 수정.
     
 -   `ParticleSystem`
-    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleReflection.jpg?raw=true" width=200 height=320> 
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleReflection.jpg?raw=true" width=150 height=270> 
     -   ParticleSystem 레이트레이싱 지원
         -   UE4는 CascadeParticleSystem의 레이트레이싱을 지원하지 않음.
         -   따라서 게임에서 가장 많이 사용 되는 MeshParticle과 SpriteParticle이 레이트레이싱 지원 가능 하도록 기능 구현.
@@ -83,3 +87,8 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Footprint.jpg?raw=true" width=246 height=167>
     -  아트팀에서 Footprint를 간단하게 사용 할 수 있도록 머티리얼 에디터에서 FootprintMask노드와 TransformFootprintTS노드를 제공.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=270>
+
+## FoliageInteraction
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
+-   `Footprint`
+    -   UE4 ShadowDepthRendering 코드를 참조하여 구현.

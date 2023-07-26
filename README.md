@@ -6,17 +6,19 @@
 ## 구현 결과
 -   `Raytracing` [PC Only]
     -   [Reflection & Global illumination], [ParticleSystem Raytracing]
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=400 height=250>
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=400 height=250>
 
 -   `Footprint (지형에 흔적 남기기)` [PC & Mobile]
-    -   Character Footprint
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=400 height=250>
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=400 height=250>
 
 -   `FoliageInteraction` [PC & Mobile]
-    -   FoliageInteraction
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250>
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250>
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
 
+-   `ScreenSpaceAfterimage (화면공간 잔상효과)` [PC & Mobile]
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_1.gif?raw=true" width=400 height=250>
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_2.gif?raw=true" width=400 height=250>
+        
 ## Raytracing
 -   `Reflection`
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXReflection.png?raw=true" width=900 height=150>    
@@ -73,9 +75,9 @@
     -   UE4 ShadowDepthRendering 코드를 참조하여 구현.
     -   PrimitiveComponent에 프로퍼티를 추가하여 Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver로 구분.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>
-    -   Footprint영역(AABBox)에 들어온 FootprintCaster와 FootprintReceiver 컬링.
+    -   컬링거리에 들어온 FootprintCaster와 FootprintReceiver 컬링.
         -   최적화를 위해 Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)활용.
-    -   FootprintCaster와 FootprintReceiver를 2Pass로 나누어 렌더링.
+    -   FootprintCaster와 FootprintReceiver를 2 Pass로 나누어 렌더링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
         -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹.
     -  마스킹결과를 이전 프레임의 FootprintMaskBuffer와 블렌딩하여 현재 프레임의 FootprintMaskBuffer생성.
@@ -99,7 +101,13 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=280 height=200>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionProps.png?raw=true" width=400 height=500>
 
-
+## ScreenSpaceAfterimage
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
+-   `Footprint`
+    -   UE4의 CustomDepthStencil 기능을 활용하여 구현.
+    -   PrimitiveComponent에 DrawScreenSpaceAfterimage 프로퍼티를 추가하여 잔상을 남길지 여부 판단.
+    -   특정 시간마다 (0.333초) DrawScreenSpaceAfterimage가 활성화된 프리미티브의 Stencil 기록.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Stencil.jpg?raw=true" width=400 height=270>
 
 
             

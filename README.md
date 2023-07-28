@@ -96,7 +96,7 @@
     -   ShadowDepthPass 이전(폴리지의 흔들림이 적용된 그림자를 그리기 위해 ShadowDepthPass 이전에 렌더링) FoliageInteractionBufferPass 를 추가하여 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성. 
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionBuffer.jpg?raw=true" width=550 height=250>
     -   Foliage용 Material에서 FoliageInteraction노드(전용 MaterialExpression 추가)를 이용해 FoliageInteractionBuffer의 정보를 가져와 폴리지의 움직임을 시각적으로 구현.
-         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionNode.jpg?raw=true" width=5000 height=170>
+         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionNode.jpg?raw=true" width=500 height=168>
     -   상호작용 강도와(Force) 형태를(Direction Intensity, Angle) 쉽게 제어할수 있도록 구현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=280 height=200>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionProps.png?raw=true" width=400 height=500>

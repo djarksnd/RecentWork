@@ -95,19 +95,24 @@
     -   FoliageInteractionComponent 클래스를 제작하여 구현.
     -   ShadowDepthPass 이전(폴리지의 흔들림이 적용된 그림자를 그리기 위해 ShadowDepthPass 이전에 렌더링) FoliageInteractionBufferPass 를 추가하여 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성. 
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionBuffer.jpg?raw=true" width=550 height=250>
-    -   Foliage용 Material에서 FoliageInteractionNode를 이용해 FoliageInteractionBuffer의 정보를 가져와 폴리지의 움직임을 시각적으로 구현.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionBuffer.jpg?raw=true" width=280 height=200>
-    -   상호작용 강도와(Force) 형태를(DirectionIntensity, Angle) 쉽게 제어할수 있도록 구현.
+    -   Foliage용 Material에서 FoliageInteraction노드(전용 MaterialExpression 추가)를 이용해 FoliageInteractionBuffer의 정보를 가져와 폴리지의 움직임을 시각적으로 구현.
+    -   상호작용 강도와(Force) 형태를(Direction Intensity, Angle) 쉽게 제어할수 있도록 구현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=280 height=200>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionProps.png?raw=true" width=400 height=500>
 
 ## ScreenSpaceAfterimage
--   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
--   `Footprint`
-    -   UE4의 CustomDepthStencil 기능을 활용하여 구현.
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_1.gif?raw=true" width=350 height=200>
+-   `ScreenSpaceAfterimage`
+    -   UE4의 CustomDepthStencil기능 과 Postprocess를 활용하여 구현.
     -   PrimitiveComponent에 DrawScreenSpaceAfterimage 프로퍼티를 추가하여 잔상을 남길지 여부 판단.
-    -   특정 시간마다 (0.333초) DrawScreenSpaceAfterimage가 활성화된 프리미티브의 Stencil 기록.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Stencil.jpg?raw=true" width=400 height=270>
+    -   시간에 따른 잔상의 FadeOut처리를 위해 2장의 ScreenSpaceAfterimageBuffer를 사용.
+    -   CustomDepthStencil기능을 이용해 특정 시간마다(0.333초) DrawScreenSpaceAfterimage가 활성화된 프리미티브의 Stencil 기록.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Stencil.jpg?raw=true" width=300 height=200>
+    -   Stencil이 기록된 부분에 해당하는 픽셀을 SceneTexture에서 읽어와 이전 프레임의 ScreenSpaceAfterimage 버퍼에 복사. 
+    -   매 프레임 마다 이전 프레임의 ScreenSpaceAfterimageBuffer에서 픽셀을 읽어 DeltaTime을 이용해 FadeOut처리를(AlphaBlend) 한후 현재 프레임의 ScreenSpaceAfterimageBuffer에 기록.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_AttBuffer.jpg?raw=true" width=300 height=200>
+    -   현재 프레임의 ScreenSpaceAfterimageBuffer와 SceneTexture를 섞어 최종결과물 생성.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Result.jpg?raw=true" width=300 height=200>
 
 
             

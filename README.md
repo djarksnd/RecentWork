@@ -106,7 +106,7 @@
 -   `ScreenSpaceAfterimage`
     -   UE4의 CustomDepthStencil기능 과 Postprocess를 활용하여 구현.
     -   PrimitiveComponent에 DrawScreenSpaceAfterimage 프로퍼티를 추가하여 잔상을 남길지 여부 판단.
-    -   시간에 따른 잔상의 FadeOut처리를 위해 2장의 ScreenSpaceAfterimageBuffer를 사용.
+    -   시간에 따른 잔상의 FadeOut처리를 위해 2장의 ScreenSpaceAfterimageBuffer를 매 프레임 스왑하여 서용.
     -   CustomDepthStencil기능을 이용해 특정 시간마다(0.333초) DrawScreenSpaceAfterimage가 활성화된 PrimitiveComponent의 Stencil 기록.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Stencil.jpg?raw=true" width=300 height=200>
     -   Stencil이 기록된 부분에 해당하는 픽셀을 SceneTexture에서 읽어와 이전 프레임의 ScreenSpaceAfterimage 버퍼에 복사. 

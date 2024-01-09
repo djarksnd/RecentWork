@@ -128,7 +128,7 @@
           -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Normal.jpg?raw=true" width=350 height=300>
     -   기존의 CSM 방식을 수정하여 첫 번째 CSM은 게임캐릭터 주위만 표현하여 ShadowDepthMap이 표현해야 할 범위를 좁혀 ShadowDepthMap을 더 뚜렷하게 그린다.      
           -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Focal.jpg?raw=true" width=350 height=300>
-    -   그림자를 렌더링 하는 쉐이더코드를 수정하여 캐릭터의 주위영역은 첫 번째 CSM에서 ShadowDepth를 읽어와 그림자를 처리하면 캐릭터주위의 그림자가 뚜렷하게 표현된다.
+    -   그림자를 렌더링 하는 쉐이더코드를 수정하여 캐릭터의 주위픽셀은 첫 번째 CSM에서 ShadowDepth를 읽어와 그림자를 처리하면 캐릭터주위의 그림자가 뚜렷하게 표현된다.
     -   단 캐릭터주위를 벗어난 부분은 CSM이 표현해야할 범위가 더욱 넓어지기에 기존의 CSM방식보다 그림자가 덜 뭉개지게 된다. 
     -   캐릭터주위의 그림자가 뚜렷해지는 부분 시각화.
           -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Sphere.jpg?raw=true" width=300 height=300> 

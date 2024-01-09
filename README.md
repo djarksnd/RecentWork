@@ -18,7 +18,10 @@
 -   `ScreenSpaceAfterimage (화면공간 잔상효과)` [PC & Mobile]
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_1.gif?raw=true" width=400 height=250>
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_2.gif?raw=true" width=400 height=250>
-        
+
+-   `FocalShadow (캐릭터에 초점을 맞춘 그림자)` [PC & Mobile]
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
+    
 ## Raytracing
 -   `Reflection`
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXReflection.png?raw=true" width=900 height=150>    

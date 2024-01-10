@@ -125,6 +125,7 @@
     -   따라서 게임캐릭터주위 또는 화면중앙의 그림자만 더 뚜렷하게 표현할 수 있다면 ShadowDepthMap의 해상도를 올리지 않고 그림자의 품질을 높일 수 있다.
 -   `구현 방법`
     -   기존의 CSM 방식은 뷰프러스텀 영역을 그림자의 표현거리에 따라 나누어 ShadowDepthMap을 렌더링한다.
+    -   이 때 ShadowDepthMap이 표현해야할 범위는 파란색과 초록색의 원으로 실제 뷰프러스텀보다 큰 범위를 표현해야 한다.
           -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Normal.jpg?raw=true" width=400 height=300>
     -   기존의 CSM 방식을 수정하여 첫 번째 CSM(CSM 1)은 초점영역(게임캐릭터 주위 또는 화면중앙)만 표현하여 ShadowDepthMap이 표현해야 할 범위를 좁혀 ShadowDepthMap을 더 뚜렷하게 그린다.      
           -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Focal.jpg?raw=true" width=350 height=300>

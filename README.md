@@ -122,7 +122,7 @@
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
 -   `구현 아이디어`
     -   게임을 플레이중인 유저의 시점은 게임캐릭터주위 또는 화면중앙에 머무르게 된다.
-    -   따라서 게임캐릭터주위 또는 화면중역의 그림자만 더 뚜렷하게 표현할 수 있다면 ShadowDepthMap의 해상도를 올리지 않고 그림자의 품질을 높일 수 있다.
+    -   따라서 게임캐릭터주위 또는 화면중앙의 그림자만 더 뚜렷하게 표현할 수 있다면 ShadowDepthMap의 해상도를 올리지 않고 그림자의 품질을 높일 수 있다.
 -   `구현 방법`
     -   기존의 CSM 방식은 뷰프러스텀 영역을 거리에 따라 나누어 ShadowDepthMap을 표현한다.
           -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Normal.jpg?raw=true" width=350 height=300>

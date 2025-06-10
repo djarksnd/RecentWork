@@ -29,6 +29,7 @@
 
 ## 3D WindSimulation
     -   불투명표면과 반투명표면간 반사가 일어날 수 있도록 수정.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=776 height=221>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=560 height=240>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCylinder_Vortex.gif?raw=true" width=532 height=240>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GSphere_Omni.gif?raw=true" width=578 height=240>

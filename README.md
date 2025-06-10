@@ -29,7 +29,9 @@
 
 ## 3D WindSimulation
 -   `3D WindSimulation`
-    -   불투명표면과 반투명표면간 반사가 일어날 수 있도록 수정.
+    -   Real-Time Fluid Dynamics for Games 논문을 기반으로 제작.
+        -   https://www.cs.cmu.edu/afs/cs/academic/class/15462-s13/www/lec_slides/StamFluidforGames.pdf
+    -   3차원을 표현하기 위해 3DTexture와 ComputeShader를 이용해 구현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=560 height=240>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCylinder_Vortex.gif?raw=true" width=532 height=240>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GSphere_Omni.gif?raw=true" width=578 height=240>

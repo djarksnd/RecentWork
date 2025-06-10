@@ -4,6 +4,10 @@
 -   UE4 or UE5 를 이용해 구현되었습니다.
 
 ## 구현 결과
+-   [`3D WindSimulation` [PC Only] -UE5](#3d-windsimulation)
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=776 height=221>
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Fan_Fire.gif?raw=true" width=260 height=230><img src="https://github.com/djarksnd/RecentWork/blob/main/images/Fire_MovingBall.gif?raw=true" width=267 height=230>
+        
 -   [`Raytracing` [PC Only] -UE4](#raytracing)
     -   [Reflection & Global illumination], [ParticleSystem Raytracing]
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXParticleAnimation.gif?raw=true" width=400 height=250>
@@ -21,7 +25,18 @@
 
 -   [`FocalShadow (캐릭터에 초점을 맞춘 그림자)` [PC & Mobile] -UE5](#focalshadow)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
-    
+
+
+## 3D WindSimulation
+-   `3D WindSimulation`
+    -   Real-Time Fluid Dynamics for Games 논문을 기반으로 제작.
+        -   https://www.cs.cmu.edu/afs/cs/academic/class/15462-s13/www/lec_slides/StamFluidforGames.pdf
+    -   3차원을 표현하기 위해 3DTexture와 ComputeShader를 이용해 구현되었으며, 언리얼엔진의 내부 코드 수정 없이 플러그인으로 제작.
+    -   바람의 플루이드 시뮬레이션을 수행할 공간을 표현하고 리소스를 관리하는 WindVolumeComponent(해당 볼륨 내부에서만 시뮬레이션 수행)와 바람을 일으키는 WindEmitterComponent로 구성.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=560 height=240>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCylinder_Vortex.gif?raw=true" width=532 height=240>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GSphere_Omni.gif?raw=true" width=578 height=240>
+        
 ## Raytracing
 -   `Reflection`
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXReflection.png?raw=true" width=900 height=150>    

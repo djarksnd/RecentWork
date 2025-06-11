@@ -38,14 +38,15 @@
     -   시뮬레이션을 수행할 공간을 표현하고 리소스를 관리하는 WindVolumeComponent(해당 볼륨 내부에서만 시뮬레이션 수행)와 바람을 일으키는 WindEmitterComponent로 구성.
     -   WindVolumeComponent를 플레이어 캐릭터에 부착하여 플레이어 주위에서 항상 시뮬레이션이 수행될수 있도록 처리.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/WindVolume.png?raw=true" width=330 height=230>  
-    -   WindEmitterComponent의 외형타입(원, 원통, 원뿔 등)과 방사타입(방향성, 전방향, 회오리 등)을 이용해 다양한 형태의 바람생성.
-        -   원 + 전방향    
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=560 height=240
-        -   원통 + 회오리    
+    -   WindEmitterComponent의 외형타입(원, 원통, 원뿔 등)과 방사타입(방향성, 전방향, 회오리, 이동량 등)을 이용해 다양한 형태의 바람생성.
+        -   원뿔 + 전방향
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=560 height=240>
+        -   원통 + 회오리
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCylinder_Vortex.gif?raw=true" width=532 height=240>
-        -   원뿔 + 전방향   
+        -   원 + 전방향
             -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GSphere_Omni.gif?raw=true" width=578 height=240>
-
+        -   원통 + 이동량        
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=776 height=221>
         
 ## Raytracing
 -   `Reflection`

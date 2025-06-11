@@ -40,13 +40,13 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/WindVolume.png?raw=true" width=300 height=190>  
     -   WindEmitterComponent의 외형타입(원, 원통, 원뿔 등)과 방사타입(방향성, 전방향, 회오리, 이동량 등)을 이용해 다양한 형태의 바람생성.
         -   원뿔 + 전방향
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=400 height=180>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=350 height=150>
         -   원통 + 회오리
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCylinder_Vortex.gif?raw=true" width=400 height=180>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCylinder_Vortex.gif?raw=true" width=350 height=150>
         -   원 + 전방향
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GSphere_Omni.gif?raw=true" width=400 height=180>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GSphere_Omni.gif?raw=true" width=350 height=150>
         -   원통 + 이동량        
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=550 height=180>
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=500 height=150>
         
 ## Raytracing
 -   `Reflection`

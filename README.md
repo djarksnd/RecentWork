@@ -29,15 +29,15 @@
 
 ## 3D WindSimulation
 -   `3D WindSimulation`
-    -   Real-Time Fluid Dynamics for Games 논문을 기반으로 제작.(플루이드 시뮬레이션을 이용하여 바람(Velocity)을 확산 및 이류시킨다.)
+    -   Real-Time Fluid Dynamics for Games 논문을 기반으로 제작.(플루이드 시뮬레이션을 이용하여 바람(Velocity)을 확산 및 이류)
         -   https://www.cs.cmu.edu/afs/cs/academic/class/15462-s13/www/lec_slides/StamFluidforGames.pdf
     -   3차원을 표현하기 위해 3DTexture(언리얼의 VolumeRenderTarget)와 ComputeShader를 이용해 구현되었으며, 언리얼 엔진의 내부 코드 수정 없이 플러그인으로 제작.
+    -   시뮬레이션 결과는 VolumeRenderTarget에 저장되며, 해당 VolumeRenderTarget을 머티리얼(폴리지의 흔들림 처리) 및 나이아가라 모듈에서 읽어 상호작용 처리.
+    -   VolumeRenderTarget의 해상도는 시뮬레이션을 위한 3차원 격자의 크기가 되며, VolumeRenderTarget의 각 텍셀은 시뮬레이션을 위한 하나의 셀을 표현.(각 셀마다 바람의 속도 저장)
+    -   실행 성능 및 메모리 최적화를 위해 작은 해상도의 VolumeRenderTarget을 사용(64 X 64 X 32)하며, 셀간의 간격은 0.5m로 설정.(총 32m X 32m X 16m 크기의 영역) 
     -   바람의 시뮬레이션을 수행할 공간을 표현하고 리소스를 관리하는 WindVolumeComponent(해당 볼륨 내부에서만 시뮬레이션 수행)와 바람을 일으키는 WindEmitterComponent로 구성.
     -   WindVolumeComponent를 플레이어 캐릭터에 부착하여 플레이어 주위에서 항상 시뮬레이션이 수행될수 있도록 처리.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/WindVolume.png?raw=true" width=330 height=230>  
-    -   시뮬레이션 결과는 VolumeRenderTarget에 저장되며, 해당 VolumeRenderTarget을 머티리얼(폴리지의 흔들림 처리) 및 나이아가라 모듈에서 읽어 상호작용 처리.
-    -   VolumeRenderTarget의 해상도는 시뮬레이션을 위한 3차원 격자의 크기가 되며, VolumeRenderTarget의 각 텍셀은 시뮬레이션을 위한 하나의 셀을 표현한다.(각 셀마다 바람의 속도 저장)
-    -   실행 성능 및 메모리 최적화를 위해 작은 해상도의 VolumeRenderTarget을 사용(64 X 64 X 32)하며, 시뮬레이션을 수행할 셀의 간격은 0.5m로 설정. 
  
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCone_Omni.gif?raw=true" width=560 height=240>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/GCylinder_Vortex.gif?raw=true" width=532 height=240>

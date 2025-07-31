@@ -18,7 +18,7 @@
 -   [`Footprint (지형에 흔적 남기기)` [PC & Mobile] -UE4](#footprint)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=400 height=250>
 
--   [`FoliageInteraction` [PC & Mobile] -UE4](#foliageinteraction)
+-   [`Foliage Interaction` [PC & Mobile] -UE4](#foliage_interaction)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250>
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
 
@@ -122,7 +122,7 @@
     -  아트팀에서 Footprint를 간단하게 사용 할 수 있도록 머티리얼 에디터에서 FootprintMask노드와 TransformFootprintTS노드를 제공.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=270>
 
-## FoliageInteraction
+## Foliage Interaction
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
 -   `FoliageInteraction`
     -   FoliageInteractionComponent 클래스를 제작하여 구현.

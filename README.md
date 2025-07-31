@@ -18,7 +18,7 @@
 -   [`Footprint (지형에 흔적 남기기)` [PC & Mobile] -UE4](#footprint)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=400 height=250>
 
--   [`Foliage Interaction` [PC & Mobile] -UE4](#foliage_interaction)
+-   [`Foliage Interaction` [PC & Mobile] -UE4](#foliage-interaction)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250>
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
 

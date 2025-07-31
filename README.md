@@ -142,21 +142,17 @@
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintAnimation.gif?raw=true" width=300 height=175>
 -   `Footprint`
     -   UE4 ShadowDepthRendering 코드를 참조하여 구현.
-    -   PrimitiveComponent에 프로퍼티를 추가하여 Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver로 구분.
+    -   PrimitiveComponent에 프로퍼티를 추가하여 Footprint를 남기는 FootprintCaster와 Footprint가 표면에 남게 되는 FootprintReceiver 구분.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintProperty.jpg?raw=true" width=200 height=250>
-    -   컬링거리에 들어온 FootprintCaster와 FootprintReceiver 컬링.
-        -   최적화를 위해 Octree와 Multithread(PC에선 Parallel For 활용, Mobile에선 MultiThread 사용하지 않음)활용.
-    -   FootprintCaster와 FootprintReceiver를 2 Pass로 나누어 렌더링.
+    -   바텀뷰 시점으로 FootprintCaster와 FootprintReceiver 렌더링.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintExp.png?raw=true" width=246 height=167>
         -   Depth & Stencil Test를 이용하여 FootprintCaster와 FootprintReceiver가 겹치는 영역 마스킹.
-    -  마스킹결과를 이전 프레임의 FootprintMaskBuffer와 블렌딩하여 현재 프레임의 FootprintMaskBuffer생성.
+    -  마스킹결과를 이전 프레임의 FootprintMaskBuffer와 블렌딩(시간에 따른 페이드 아웃을 위해)하여 현재 프레임의 FootprintMaskBuffer생성.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMask.png?raw=true" width=246 height=167>
-    -  현재 프레임의 FootprintMaskBuffer를 이용하여 FootprintTangentBuffer 생성
+    -  현재 프레임의 FootprintMaskBuffer를 이용하여 FootprintNormalBuffer 생성
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintNormalMap.png?raw=true" width=246 height=167>
-    -  FootprintMaskBuffer와 FootprintTangentBuffer를 사용하여 최종 결과물 생성.    
+    -  FootprintMaskBuffer와 FootprintNormalBuffer를 사용하여 최종 결과물 생성.    
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Footprint.jpg?raw=true" width=246 height=167>
-    -  아트팀에서 Footprint를 간단하게 사용 할 수 있도록 머티리얼 에디터에서 FootprintMask노드와 TransformFootprintTS노드를 제공.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=270>
 
 ## Foliage Interaction
 -   `FoliageInteraction`
@@ -172,12 +168,10 @@
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_1.gif?raw=true" width=350 height=200>
 -   `ScreenSpaceAfterimage`
     -   UE4의 CustomDepthStencil기능 과 Postprocess를 활용하여 구현.
-    -   PrimitiveComponent에 DrawScreenSpaceAfterimage 프로퍼티를 추가하여 잔상을 남길지 여부 판단.
-    -   CustomDepthStencil기능을 이용해 특정 시간마다(0.333초) DrawScreenSpaceAfterimage가 활성화된 PrimitiveComponent의 Stencil 기록.
+    -   CustomDepthStencil기능을 이용해 잔상을 남길 캐릭터의 Stencil을 기록.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Stencil.jpg?raw=true" width=300 height=200>
-    -   Stencil이 기록된 부분에 해당하는 픽셀을 SceneTexture에서 읽어와 이전 프레임의 ScreenSpaceAfterimage 버퍼에 복사.
-    -   시간에 따른 잔상의 FadeOut처리를 위해 2장의 ScreenSpaceAfterimageBuffer(Current And Prev)를 매 프레임 서로 스왑하여 사용.
-    -   매 프레임 마다 이전 프레임의 ScreenSpaceAfterimageBuffer에서 픽셀을 읽어 DeltaTime을 이용해 FadeOut처리를(AlphaBlend) 한후 현재 프레임의 ScreenSpaceAfterimageBuffer에 기록.
+    -   캐릭터의 Stencil이 기록된 부분에 해당하는 픽셀을 SceneTexture에서 읽어와 ScreenSpaceAfterimage버퍼(렌더타겟)에 복사.
+    -   이전 프레임의 ScreenSpaceAfterimageBuffer에서 픽셀을 읽어 FadeOut처리를 한후 현재 프레임의 ScreenSpaceAfterimageBuffer와 블랜드 수행.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_AttBuffer.jpg?raw=true" width=300 height=200>
     -   현재 프레임의 ScreenSpaceAfterimageBuffer와 SceneTexture를 섞어 최종결과물 생성.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Result.jpg?raw=true" width=300 height=200>

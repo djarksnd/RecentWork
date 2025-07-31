@@ -56,22 +56,23 @@
 
 ## Character Wound
 -   `Character Wound`
-    -   캐릭터의 상처표현 시 데칼을 사용하거나 렌더타겟을 활용하여 구현하는 경우가 많음.
-    -   데칼을 사용할 경우 스켈레탈메쉬의 에니메이션에 데칼이 반응하지 못하기 때문에 이질감이 발생.
-         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Decal.gif?raw=true" width=250 height=200>
-    -   랜더타겟을 이용할 경우 성능 및 비디오메모리 사용량에 부담이 생김.   
-    -   위의 2가지 문제를 해결하기 위해 '커스텀 프리미티브 데이터'와 '텍스쳐 프로젝션'을 활용하여 캐릭터의 상처 구현.
-         -   https://dev.epicgames.com/documentation/ko-kr/unreal-engine/storing-custom-data-in-unreal-engine-materials-per-primitive
-    -   커스텀 프리미티브 데이터를 이용해 상처의 정보(위치, 방향{Forward & Right Vector}, 넓이{Right, Up Vector 방향의 크기}, 깊이{Forward Vector 방향의 크기}, 아틀라스 ID, 알파값)를 저장 후, 머티리얼에서 해당 값을 읽어 텍스쳐 프로젝션 수행.
-        -   아틀라스 텍스쳐를 사용해 총상, 자상, 타박상 등 다양한 상처 표현
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=500 height=150>
-    -   언리얼5.5.4기준 프리미티브 컴포넌트당 커스텀 프리미티브 데이터의 갯수는 float4 vector 9개로, 다수의 상처를 표현하기 위해 상처의 정보를 16바이트로 패킹하여 상처 하나당 float4 vector 하나를 사용해 최대 9개의 상처를 표현할 수 있도록 구현.
-    -   머티리얼에서 16바이트로 패킹된 상처의 정보를 언패킹하여 텍스쳐 프로젝션을 수행.
-    -   텍스쳐 프로젝션 시 Pre-Skinned Local Position 노드를 통해 스켈레탈메쉬의 Ref Pose 상태의 표면위치를 활용하여 텍스쳐 프로젝션 수행.
+    -   '커스텀 프리미티브 데이터'와 '텍스쳐 프로젝션'을 활용한 캐릭터의 상처 구현.   
+        -   캐릭터의 상처표현 시 데칼을 사용하거나 렌더타겟을 활용하여 구현하는 경우가 많음.
+        -   데칼을 사용할 경우 스켈레탈메쉬의 에니메이션에 데칼이 반응하지 못하기 때문에 이질감이 발생.
+            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Decal.gif?raw=true" width=250 height=200>
+        -   랜더타겟을 이용할 경우 성능 및 비디오메모리 사용량에 부담이 생김.   
+        -   위의 2가지 문제를 해결하기 위해 '커스텀 프리미티브 데이터'와 '텍스쳐 프로젝션'을 활용하여 캐릭터의 상처 구현.
+            -   https://dev.epicgames.com/documentation/ko-kr/unreal-engine/storing-custom-data-in-unreal-engine-materials-per-primitive
+    -   커스텀 프리미티브 데이터를 이용해 상처의 정보(위치, 방향{Forward & Right Vector}, 넓이{Right & Up Vector 방향의 크기}, 깊이{Forward Vector 방향의 크기}, 아틀라스 ID, 알파값)들을 저장.
+    -   언리얼5.5.4기준 프리미티브 컴포넌트당 커스텀 프리미티브 데이터의 갯수는 float4 vector 9개로, 다수의 상처를 표현하기 위해 상처의 정보를 16바이트로 패킹하여 상처 하나당 float4 vector 하나를 사용해 최대 9개의 상처 표현.
+    -   머티리얼에서 16바이트로 패킹된 상처의 정보를 언패킹하여 텍스쳐 프로젝션 수행.
+    -   텍스쳐 프로젝션 시 Pre-Skinned Local Position 노드를 통해 스켈레탈메쉬의 Ref Pose 상태의 표면위치에서 텍스쳐 프로젝션 수행.
     -   타원의 방정식을 이용해 UV를 변형시켜 메쉬의 곡면에서 텍스쳐 프로젝션 시 텍스쳐가 늘어지는 현상 완화.  
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Projection.png?raw=true" width=230 height=280>
-            -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Projection2.png?raw=true" width=300 height=220>
-            
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Projection.png?raw=true" width=230 height=280>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Projection2.png?raw=true" width=300 height=220>
+    -   아틀라스 텍스쳐를 사용해 총상, 자상, 타박상 등 다양한 상처 표현.
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=500 height=150>
+
 ## Raytracing
 -   `Reflection`
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXReflection.png?raw=true" width=900 height=150>    

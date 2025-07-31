@@ -11,6 +11,9 @@
 -   [`Character Wound` -UE5](#character-wound)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound.gif?raw=true" width=318 height=400>
 
+-   [`FocalShadow (캐릭터에 초점을 맞춘 그림자)` [PC & Mobile] -UE5](#focalshadow)
+    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
+
 -   [`Raytracing` [PC Only] -UE4](#raytracing)
     -   [Reflection & Global illumination], [ParticleSystem Raytracing]
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/RTXAnimation.gif?raw=true" width=400 height=250>
@@ -22,14 +25,10 @@
 -   [`Foliage Interaction` [PC & Mobile] -UE4](#foliage-interaction)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250>
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250>
-    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
 
 -   [`ScreenSpaceAfterimage (화면공간 잔상효과)` [PC & Mobile] -UE4](#screenspaceafterimage)
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_1.gif?raw=true" width=400 height=250>
     -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Skill_2.gif?raw=true" width=400 height=250>
-
--   [`FocalShadow (캐릭터에 초점을 맞춘 그림자)` [PC & Mobile] -UE5](#focalshadow)
-    -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
 
 
 ## 3D WindSimulation
@@ -72,6 +71,22 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Projection2.png?raw=true" width=300 height=220>
     -   아틀라스 텍스쳐를 사용해 총상, 자상, 타박상 등 다양한 상처 표현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Car_combine.gif?raw=true" width=500 height=150>
+
+## FocalShadow
+-   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
+-   `구현 아이디어`
+    -   게임을 플레이중인 유저의 시점(특히 모바일게임)은 게임캐릭터주위 또는 화면중앙에 머무르게 된다.
+    -   따라서 게임캐릭터주위 또는 화면중앙의 그림자만 더 뚜렷하게 표현한다면 ShadowDepthMap의 해상도를 키우지 않고 그림자의 품질을 높일 수 있다.
+-   `구현 방법`
+    -   기존의 CSM 방식은 뷰프러스텀 영역을 그림자의 표현거리에 따라 나누어 ShadowDepthMap을 렌더링한다.
+    -   이 때 ShadowDepthMap이 표현해야할 범위는 파란색과 초록색의 원으로 실제 뷰프러스텀보다 큰 범위를 표현한다.
+          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Normal.jpg?raw=true" width=400 height=300>
+    -   기존의 CSM 방식을 수정하여 첫 번째 CSM(CSM 1)은 초점영역(게임캐릭터 주위 또는 화면중앙)만 표현하여 ShadowDepthMap이 표현해야 할 범위를 좁혀 ShadowDepthMap을 더 뚜렷하게 그린다.      
+          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Focal.jpg?raw=true" width=350 height=300>
+    -   그림자 렌더링 코드를 수정하여 초점영역(게임캐릭터 주위 또는 화면중앙)의 픽셀은 첫 번째 CSM(CSM 1)에서 ShadowDepth를 읽어와 그림자를 처리하면 초점영역(게임캐릭터 주위 또는 화면중앙)의 그림자를 더 뚜렷하게 표현할 수 있다.
+    -   단 초점영역(게임캐릭터 주위 또는 화면중앙)을 벗어난 부분(CSM 2 -> 화면 가장자리 부분)은 CSM이 표현해야할 범위가 기존보다 넓어지기에 기존 CSM방식보다 그림자가 뭉개질 수 있다.
+    -   아래의 이미지는 초점영역(게임캐릭터 주위 또는 화면중앙)을 시각화한 모습이다.
+          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Sphere.jpg?raw=true" width=420 height=300> 
 
 ## Raytracing
 -   `Reflection`
@@ -144,14 +159,12 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FootprintMaterialNode.png?raw=true" width=400 height=270>
 
 ## Foliage Interaction
--   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteraction.gif?raw=true" width=250 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionRoar.gif?raw=true" width=300 height=250><img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionWhirlwind.gif?raw=true" width=300 height=250>
 -   `FoliageInteraction`
-    -   FoliageInteractionComponent 클래스를 제작하여 구현.
-    -   ShadowDepthPass 이전(폴리지의 흔들림이 적용된 그림자를 그리기 위해 ShadowDepthPass 이전에 렌더링) FoliageInteractionBufferPass 를 추가하여 FoliageInteractionComponent의 정보(FoliageInteractionSceneProxy)를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer 생성. 
+    -   FoliageInteractionBufferPass를 추가하여 캐릭터의 이동 또는 스킬등의 행동에 따라 발생한 힘의 정보를 탑뷰 시점에서 렌더링하여 FoliageInteractionBuffer(렌더타겟) 생성.
+        -   FoliageInteractionBuffer를 랜더링하기 위해 FoliageInteractionComponent와 FoliageInteractionSceneProxy 두개의 사용자 정의 클래스 생성.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionBuffer.jpg?raw=true" width=550 height=250>
-    -   Material에서 FoliageInteraction노드(전용 MaterialExpression 추가)를 이용해 FoliageInteractionBuffer의 정보를 가져와 폴리지의 움직임을 시각적으로 구현.
-         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionNode.jpg?raw=true" width=500 height=168>
-    -   상호작용 강도와(Force) 형태를(Direction Intensity, Angle) 쉽게 제어할수 있도록 구현.
+    -   Material에서 FoliageInteractionBuffer의 정보를 통해 폴리지의 버텍스 위치를 변경하여 폴리지의 움직임 처리.
+    -   FoliageInteractionComponent의 프로퍼티 조절을 통해 다양한 상호작용 형태를 표현가능 하도록 구현.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionComponent.jpg?raw=true" width=280 height=200>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FoliageInteractionProps.png?raw=true" width=400 height=500>
 
@@ -169,20 +182,5 @@
     -   현재 프레임의 ScreenSpaceAfterimageBuffer와 SceneTexture를 섞어 최종결과물 생성.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Result.jpg?raw=true" width=300 height=200>
 
-## FocalShadow
--   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
--   `구현 아이디어`
-    -   게임을 플레이중인 유저의 시점은 게임캐릭터주위 또는 화면중앙에 머무르게 된다.
-    -   따라서 게임캐릭터주위 또는 화면중앙의 그림자만 더 뚜렷하게 표현할 수 있다면 ShadowDepthMap의 해상도를 올리지 않고 그림자의 품질을 높일 수 있다.
--   `구현 방법`
-    -   기존의 CSM 방식은 뷰프러스텀 영역을 그림자의 표현거리에 따라 나누어 ShadowDepthMap을 렌더링한다.
-    -   이 때 ShadowDepthMap이 표현해야할 범위는 파란색과 초록색의 원으로 실제 뷰프러스텀보다 큰 범위를 표현해야 한다.
-          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Normal.jpg?raw=true" width=400 height=300>
-    -   기존의 CSM 방식을 수정하여 첫 번째 CSM(CSM 1)은 초점영역(게임캐릭터 주위 또는 화면중앙)만 표현하여 ShadowDepthMap이 표현해야 할 범위를 좁혀 ShadowDepthMap을 더 뚜렷하게 그린다.      
-          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/CSM_Focal.jpg?raw=true" width=350 height=300>
-    -   그림자 렌더링 코드를 수정하여 초점영역(게임캐릭터 주위 또는 화면중앙)의 픽셀은 첫 번째 CSM(CSM 1)에서 ShadowDepth를 읽어와 그림자를 처리하면 초점영역(게임캐릭터 주위 또는 화면중앙)의 그림자를 더 뚜렷하게 표현할 수 있다.
-    -   단 초점영역(게임캐릭터 주위 또는 화면중앙)을 벗어난 부분(CSM 2 -> 화면 가장자리 부분)은 CSM이 표현해야할 범위가 살짝 넓어지기에 기존 CSM방식보다 그림자가 조금 뭉개질 수 있다.
-    -   아래의 이미지는 초점영역(게임캐릭터 주위 또는 화면중앙)을 시각화한 모습이다.
-          -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Sphere.jpg?raw=true" width=420 height=300> 
 
             

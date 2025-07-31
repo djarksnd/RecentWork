@@ -170,7 +170,7 @@
     -   UE4의 CustomDepthStencil기능 과 Postprocess를 활용하여 구현.
     -   CustomDepthStencil기능을 이용해 잔상을 남길 캐릭터의 Stencil을 기록.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_Stencil.jpg?raw=true" width=300 height=200>
-    -   캐릭터의 Stencil이 기록된 부분에 해당하는 픽셀을 SceneTexture에서 읽어와 ScreenSpaceAfterimage버퍼(렌더타겟)에 복사.
+    -   캐릭터의 Stencil이 기록된 부분에 해당하는 픽셀을 SceneTexture에서 읽어와 ScreenSpaceAfterimageBuffer(렌더타겟)에 복사.
     -   이전 프레임의 ScreenSpaceAfterimageBuffer에서 픽셀을 읽어 FadeOut처리를 한후 현재 프레임의 ScreenSpaceAfterimageBuffer와 블랜드 수행.
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/SSAI_AttBuffer.jpg?raw=true" width=300 height=200>
     -   현재 프레임의 ScreenSpaceAfterimageBuffer와 SceneTexture를 섞어 최종결과물 생성.

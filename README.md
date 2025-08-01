@@ -70,7 +70,7 @@
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Projection.png?raw=true" width=230 height=280>
         -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/Wound_Projection2.png?raw=true" width=300 height=220>
     -   아틀라스 텍스쳐를 사용해 총상, 자상, 타박상 등 다양한 상처 표현.
-        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/WoudAtlas.png?raw=true" width=200 height=200>
+        -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/WoudAtlas.png?raw=true" width=300 height=300>
 
 ## FocalShadow
 -   <img src="https://github.com/djarksnd/RecentWork/blob/main/images/FocalShadow_Intro.jpg?raw=true" width=700 height=250>
